@@ -1,4 +1,5 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
+import cityRoute from './module/city-route'
 
 const routes = [
   { path: '/', redirect: '/home' },
@@ -18,6 +19,7 @@ const routes = [
     path: '/message',
     component: () => import('@/views/message/Index.vue'),
   },
+  ...cityRoute,
 ]
 
 const router = createRouter({
